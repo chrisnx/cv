@@ -18,7 +18,8 @@ $app['cvData'] = function() {
         'non_work_history',
         'skills',
         'work_history',
-        'education'
+        'education',
+        'about'
     ];
 
     $cvData = [];

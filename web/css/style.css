@@ -159,7 +159,7 @@ border-radius: 0px 5px 5px 0px;
 
 section {
 	border-top: 1px solid #dedede;
-	padding: 20px 0 0;
+	padding: 20px 0 20px 0;
 }
 
 section:first-child {

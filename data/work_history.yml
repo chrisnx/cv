@@ -5,7 +5,7 @@
   description: |
     A young enterprise start-up created to run an end of year event, funded by client work for local companies
 
-    I was responsible for a three man development team which built the client web sites and the social web application which users interacted with the event by uploading and voting on videos (youtube api).
+    I was responsible for a three man development team which built the client web sites and the social web application which users interacted with the event by uploading and voting on videos (youtube API).
 
     I also stage managed the live event. The attendance of the event eclipsed those of previous years and we received rave reviews from the local press.
 
@@ -14,7 +14,7 @@
   endDate: January 2012
   company: Chris Sherry Web Development
   description: |
-    Upon leaving university and finding job opportunities limited I decided to register as self employed and created a variety of web sites, print artwork and marketing campaigns for connections I had made through university and work in technical theatre, which led me to specialise in marketing and producing material for the entertainment industry.
+    Upon leaving university and finding job opportunities limited, I decided to register as self employed and created a variety of web sites, print artwork and marketing campaigns for connections I had made through university and work in technical theatre. This led me to specialise in marketing and producing material for the entertainment industry.
 
     I developed skills in all areas of web site production from client meetings and specification writing, to administrating live applications and server administration.
 
@@ -32,9 +32,21 @@
   description: |
     Working primarily as a PHP/Javascript developer for designing and building APIs for mobile web applications, and web applications for large business to customer clients.
 
+    I also completed an introduction course into iOS development, and although I have not done any iOS development since I believe it has helped improvement my code quality within PHP.
+
 - title: Web App Engineer
   startDate: June 2014
   endDate: August 2016
   company: Base
   description: |
-    Developed applications for the web and apis for mobile. One of a team of 4 PHP developers which built flagship product. Lead the development team to winning the Smarter Travel Live Hackathon 2016.
+    I was one of a team of four PHP developers building products, APIs and websites for companies around the UK.
+
+    My responsibilities included setting up continous integration and deployment infrastucture for projects, API design, proposals and estimations for large scale projects as well as being an active part of the code review process.
+
+    During my time at Base I introduced new provisioning technology, repository workflow and backups to the company's WordPress projects, improving redundancy and setup time for developers. I've talked about these improvements at user groups and conferences around the South Coast, and I am speaking at WordPress London later this month.
+
+    An advocate of accessibiility, I helped inspire improvements to the company's flagship product in this area, as well as inspiring new features to improve user experience within the application.
+
+    Away from product development I helped clients debug complex issues within their existing applications and used my knowledge of best practice and refactoring skills to turn legacy projects into stable development environments.
+
+    I was also involved in research and development projects, experimenting with new technologies, and took lead on the development of our winning entry for the Smarter Travel Live Hackathon 2016.

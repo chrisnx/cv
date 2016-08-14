@@ -8,6 +8,8 @@ skillset:
     - Agile
     - Conference speaking
     - Monitoring
+    - Version Control
+    - Open Source
 
 other-skills:
     - Video production
@@ -22,6 +24,7 @@ toolset:
     - Nginx
     - Apache
     - MySql
+    - Doctrine
     - Git Version Control
     - Symfony
     - Silex
@@ -37,5 +40,6 @@ toolset:
     - Vagrant
     - Ansible
     - WordPress (Trellis & Bedrock)
-    - Ubuntu or OSX
+    - Ubuntu
+    - OSX
     - Adobe Creative Suite
