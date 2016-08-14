@@ -224,6 +224,10 @@ section:last-child {
     margin-bottom: 5px;
 }
 
+.text-center{
+    text-align: center;
+}
+
 .education {
     margin-bottom: 40px;
 }
