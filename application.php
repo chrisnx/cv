@@ -11,13 +11,12 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/views',
 ));
 
-$app['cvData'] = function() {
+$app['cvDataSets'] = function() {
     $dataFiles = [
-        'contact_details',
-        'find_me',
-        'non_work_history',
+        'contact',
+        'work',
+        'volunteering',
         'skills',
-        'work_history',
         'education',
         'about'
     ];
@@ -32,12 +31,35 @@ $app['cvData'] = function() {
 };
 
 $app->get('/', function () use ($app) {
-    return $app['twig']->render('cv.twig', $app['cvData']);
+    return $app['twig']->render('cv.twig', $app['cvDataSets']);
 });
 
+
+/**
+ * @deprecated
+ */
 $app->get('/api/v1/cv', function () use ($app) {
-    //TODO: HalJson, multiple endpoints;
-    return $app->json($app['cvData'], 200);
+    return $app->json($app['cvDataSets'], 200);
+});
+
+$app->get('/api/v2/', function () use ($app) {
+
+    $halJson['_links']['self'] = ['href' => '/'];
+
+    foreach ($app['cvDataSets'] as $dataSet => $data) {
+        $halJson['_links'][$dataSet] = ['href' => sprintf('/%s', $dataSet)];
+    }
+
+    return $app->json($halJson, 200);
+});
+
+$app->get('/api/v2/{dataSet}', function ($dataSet) use ($app) {
+
+    $halJson['_links']['self'] = ['href' => sprintf('/%s', $dataSet)];
+
+    $halJson = array_merge($halJson, $app['cvDataSets'][$dataSet]);
+
+    return $app->json($halJson, 200);
 });
 
 return $app;

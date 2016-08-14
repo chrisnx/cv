@@ -48,25 +48,25 @@
       <ul>
         <li>
           <img class="social-icon xperia-icon" src="/images/xperia-mini-mini.png">
-          <!--googleoff: all--><a href="tel:{{ contact_details.phone }}">{{ contact_details.phone }}</a><!--googleon: all-->
+          <!--googleoff: all--><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a><!--googleon: all-->
         </li>
         <li>
           <img class="social-icon email-icon" src="/images/email.png"/>
           <!--googleoff: all--><a href='mailt&#111;&#58;%6&#51;&#37;68ris&#64;&#99;&#104;rissh&#101;rry%2Eco&#46;&#117;k'>chris&#64;chri&#115;sherry&#46;co&#46;uk</a><!--googleon: all-->
         </li>
         <li>
-          <img class="social-icon" src="/images/world.png"/>
-          <a href="{{ contact_details.website }}">{{ contact_details.website }}</a>
+          <img class="social-icon website-icon" src="/images/world.png"/>
+          <a href="https://{{ contact.website }}">{{ contact.website }}</a>
         </li>
 
         <li>
           <img class="social-icon linkedin-icon" src="/images/linkedin.png"/>
-          <a href="https://{{ contact_details.linkedin }}">{{ contact_details.linkedin }}</a>
+          <a href="https://{{ contact.linkedin }}">{{ contact.linkedin }}</a>
         </li>
 
         <li>
           <img class="social-icon twitter-icon" src="/images/twitter-bird-callout.png"/>
-          <a href="https://twitter.com/{{ contact_details.twitter }}">@{{ contact_details.twitter }}</a>
+          <a href="https://twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
         </li>
 
       </ul>
@@ -106,7 +106,7 @@
 
     <section>
       <p class="sectionHeading">Employment History</p>
-      {% for job in work_history|reverse %}
+      {% for job in work|reverse %}
 
       <article class="clearfix">
         <div class="sectionTitle">
@@ -128,7 +128,7 @@
 
     <section class="clearfix">
       <p class="sectionHeading">Community Involvement</p>
-      {% for role in non_work_history %}
+      {% for role in volunteering %}
         <article class="clearfix">
           <div class="sectionTitle">
             <h2>{{ role.role }}
@@ -181,7 +181,7 @@
       <img src="/images/file_pdf.png"/>
     </a>
 
-    <a title="JSON API" href="/api/v1/cv" class="no-print xml"/>
+    <a title="JSON API" href="/api/v2" class="no-print xml"/>
     <img src="/images/file_json.png"/>
     </a>
 
