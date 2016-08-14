@@ -42,6 +42,12 @@ p {
     margin-right:2px;
 }
 
+.linkedin-icon{
+    width:16px;
+    margin-bottom:-2px;
+    margin-right:2px;
+}
+
 .email-icon{
     margin-right:3px;
 }
@@ -58,7 +64,6 @@ p {
 	background: #fff;
 	margin: 30px auto;
         border-top: 8px solid #0099ff;
-        -webkit-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 1);
         box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 1);
         border-bottom: 8px solid #0099ff;
         position:relative;
@@ -71,10 +76,8 @@ p {
     width:60px;
     margin-right:-80px;
     padding:10px;
-    background:#222;
-    background:rgba(55,55,55,0.5);
-    -webkit-border-radius: 0px 5px 5px 0px;
-border-radius: 0px 5px 5px 0px;
+    background:#555;
+    border-radius: 0px 5px 5px 0px;
 }
 .options a{
     display:block;
@@ -137,12 +140,12 @@ border-radius: 0px 5px 5px 0px;
 
 #contactDetails ul {
 	list-style-type: none;
-	font-size: 0.9em;
+	font-size: 1.1em;
 	margin-top: 2px;
 }
 
 #contactDetails ul li {
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 	color: #444;
 }
 
@@ -372,7 +375,7 @@ h2 span.company{
 	}
 
 	section {
-		padding: 15px 0 0;
+		padding: 15px 0 15px 0;
 	}
 
 	#mainArea {
@@ -384,8 +387,8 @@ h2 span.company{
         }
 
 	.keySkills {
-    -webkit-column-count: 1; /* Chrome, Safari, Opera */
-    -moz-column-count: 1; /* Firefox */
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
 	column-count:1;
 	}
 
@@ -400,7 +403,6 @@ h2 span.company{
     #cv {
         width: 100%;
         border-top: none;
-        -webkit-box-shadow:none;
         box-shadow:none;
         border-bottom:none;
         background:#fff;
@@ -421,6 +423,7 @@ h2 span.company{
 
     section{
         padding-top:10px;
+        padding-bottom:10px;
     }
 
     .sectionTitle h1 {
