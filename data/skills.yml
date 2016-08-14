@@ -33,7 +33,6 @@ toolset:
     - Codeignitor
     - CSS3 (BEM)
     - SASS
-    - Responsive
     - Bootstrap
     - Javascript
     - JQuery
