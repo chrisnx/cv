@@ -31,165 +31,161 @@
 
   </script>
 </head>
-<body id="top">
-<div id="cv">
-  <div class="mainDetails">
-    <div id="headshot">
-      <img class="headshot" src="/images/me.jpg" alt="Chris Sherry's Headshot"/>
-    </div>
+<body class="top">
+  <div class="cv">
+    <div class="mainDetails">
+      <div class="headshot">
+        <img class="" src="/images/me.jpg" alt="Chris Sherry's Headshot"/>
+      </div>
 
-    <div id="name">
-      <h1>Chris Sherry</h1>
+      <div class="name">
+        <h1>Chris Sherry</h1>
 
-      <h2>Full stack developer</h2>
-    </div>
+        <h2>Full stack developer</h2>
+      </div>
 
-    <div id="contactDetails">
-      <ul>
-        <li>
-          <img class="social-icon xperia-icon" src="/images/xperia-mini-mini.png">
-          <!--googleoff: all--><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a><!--googleon: all-->
-        </li>
-        <li>
-          <img class="social-icon email-icon" src="/images/email.png"/>
-          <!--googleoff: all--><a href='mailt&#111;&#58;%6&#51;&#37;68ris&#64;&#99;&#104;rissh&#101;rry%2Eco&#46;&#117;k'>chris&#64;chri&#115;sherry&#46;co&#46;uk</a><!--googleon: all-->
-        </li>
-        <li>
-          <img class="social-icon website-icon" src="/images/world.png"/>
-          <a href="https://{{ contact.website }}">{{ contact.website }}</a>
-        </li>
+      <div class="contactDetails">
+        <ul>
+          <li>
+            <img class="social-icon xperia-icon" src="/images/xperia-mini-mini.png">
+            <!--googleoff: all--><a href="tel:{{ contact.phone }}">{{ contact.phone }}</a><!--googleon: all-->
+          </li>
+          <li>
+            <img class="social-icon email-icon" src="/images/email.png"/>
+            <!--googleoff: all--><a
+                href='mailt&#111;&#58;%6&#51;&#37;68ris&#64;&#99;&#104;rissh&#101;rry%2Eco&#46;&#117;k'>chris&#64;chri&#115;sherry&#46;co&#46;uk</a><!--googleon: all-->
+          </li>
+          <li>
+            <img class="social-icon website-icon" src="/images/world.png"/>
+            <a href="https://{{ contact.website }}">{{ contact.website }}</a>
+          </li>
 
-        <li>
-          <img class="social-icon linkedin-icon" src="/images/linkedin.png"/>
-          <a href="https://{{ contact.linkedin }}">{{ contact.linkedin }}</a>
-        </li>
+          <li>
+            <img class="social-icon linkedin-icon" src="/images/linkedin.png"/>
+            <a href="https://{{ contact.linkedin }}">{{ contact.linkedin }}</a>
+          </li>
 
-        <li>
-          <img class="social-icon twitter-icon" src="/images/twitter-bird-callout.png"/>
-          <a href="https://twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
-        </li>
+          <li>
+            <img class="social-icon twitter-icon" src="/images/twitter-bird-callout.png"/>
+            <a href="https://twitter.com/{{ contact.twitter }}">@{{ contact.twitter }}</a>
+          </li>
 
-      </ul>
-    </div>
-    <div class="clear"></div>
-  </div>
-
-  <div id="mainArea" class="">
-
-    <section>
-      <p class="sectionHeading">Personal Summary</p>
-     {{ about.personal_summary|nl2br }}
-
+        </ul>
+      </div>
       <div class="clear"></div>
-    </section>
+    </div>
 
-    <section>
-      <p class="sectionHeading">Core Skills</p>
-      <ul class="keySkills coreSkills">
-       {% for skill in skills.skillset|sort %}
-        <li>{{ skill }}</li>
-       {% endfor %}
-      </ul>
+    <div class="mainArea">
+      <section>
+        <p class="sectionHeading">Personal Summary</p>
+        {{ about.personal_summary|nl2br }}
 
-      <div class="clear"></div>
-    </section>
+        <div class="clear"></div>
+      </section>
 
-    <section>
-      <p class="sectionHeading">Toolset</p>
-      <ul class="keySkills">
-        {% for skill in skills.toolset|sort %}
-          <li>{{ skill }}</li>
+      <section>
+        <p class="sectionHeading">Core Skills</p>
+        <ul class="keySkills coreSkills">
+          {% for skill in skills.skillset|sort %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="clear"></div>
+      </section>
+
+      <section>
+        <p class="sectionHeading">Toolset</p>
+        <ul class="keySkills">
+          {% for skill in skills.toolset|sort %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+
+      </section>
+
+      <section>
+        <p class="sectionHeading">Employment History</p>
+        {% for job in work|reverse %}
+
+          <article class="clearfix">
+            <div class="sectionTitle">
+              <h2>{{ job.title }}
+                <span class="date">{{ job.startDate }}  - {{ job.endDate }}</span>
+                    <span class="company">
+                       {{ job.company }}
+                    </span>
+              </h2>
+
+            </div>
+            <div class="sectionContent">
+              <p>{{ job.description|nl2br }}</p>
+            </div>
+          </article>
+
         {% endfor %}
-      </ul>
+      </section>
 
-    </section>
+      <section class="clearfix">
+        <p class="sectionHeading">Community Involvement</p>
+        {% for role in volunteering %}
+          <article class="clearfix">
+            <div class="sectionTitle">
+              <h2>{{ role.role }}
+                <span class="date">{{ role.startDate }}  - {{ role.endDate }}</span>
+                    <span class="company">
+                       {{ role.name }}
+                    </span>
+              </h2>
 
-    <section>
-      <p class="sectionHeading">Employment History</p>
-      {% for job in work|reverse %}
+            </div>
+            <div class="sectionContent">
+              <p>{{ role.description|nl2br }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </section>
 
-      <article class="clearfix">
-        <div class="sectionTitle">
-          <h2>{{ job.title }}
-            <span class="date">{{ job.startDate }}  - {{ job.endDate }}</span>
-                <span class="company">
-                   {{ job.company }}
+      <section class="education clearfix">
+        <p class="sectionHeading">Education</p>
+        {% for course in education %}
+          <article>
+            <div class="sectionTitle">
+              <h2>
+                {{ course.award }}
+                <span class="course">
+                   {{ course.title }}
                 </span>
-          </h2>
+                <span class="date">{{ course.date }}</span>
+                <span class="uni">{{ course.institution }}</span>
+              </h2>
+            </div>
 
-        </div>
-        <div class="sectionContent">
-          <p>{{ job.description|nl2br }}</p>
-        </div>
-      </article>
+            <div class="sectionContent">
+              <p>{{ course.description|nl2br }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </section>
+    </div>
 
-      {% endfor %}
-    </section>
+    <div class="options no-print">
+      <a title="Print" href="javascript:window.print()" class="no-print print">
+        <img src="/images/printer.png"/>
+      </a>
 
-    <section class="clearfix">
-      <p class="sectionHeading">Community Involvement</p>
-      {% for role in volunteering %}
-        <article class="clearfix">
-          <div class="sectionTitle">
-            <h2>{{ role.role }}
-              <span class="date">{{ role.startDate }}  - {{ role.endDate }}</span>
-                <span class="company">
-                   {{ role.name }}
-                </span>
-            </h2>
+      <a title="Fork on Github" href="https://github.com/chrisnx/cv" class="no-print">
+        <img src="/images/octocat.png"/>
+      </a>
 
-          </div>
-          <div class="sectionContent">
-            <p>{{ role.description|nl2br }}</p>
-          </div>
-        </article>
-      {% endfor %}
-    </section>
+      <a title="Download as PDF" href="cv.pdf" class="no-print pdf">
+        <img src="/images/file_pdf.png"/>
+      </a>
 
-    <section class="education clearfix">
-      <p class="sectionHeading">Education</p>
-      {% for course in education %}
-      <article>
-        <div class="sectionTitle">
-          <h2>
-            {{ course.award }}
-            <span class="course">
-               {{ course.title }}
-            </span>
-            <span class="date">{{ course.date }}</span>
-            <span class="uni">{{ course.institution }}</span>
-          </h2>
-        </div>
-
-
-        <div class="sectionContent">
-          <p>{{ course.description|nl2br }}</p>
-        </div>
-      </article>
-      {% endfor %}
-    </section>
+      <a title="JSON API" href="/api/v2" class="no-print xml">
+        <img src="/images/file_json.png"/>
+      </a>
+    </div>
   </div>
-  <div class="options no-print">
-    <a title="Print" href="javascript:window.print()" class="no-print print"/>
-    <img src="/images/printer.png"/>
-    </a>
-
-    <a title="Fork on Github" href="https://github.com/chrisnx/cv" class="no-print">
-      <img src="/images/octocat.png"/>
-
-      <a title="Download as PDF" href="cv.pdf" class="no-print pdf" />
-      <img src="/images/file_pdf.png"/>
-    </a>
-
-    <a title="JSON API" href="/api/v2" class="no-print xml"/>
-    <img src="/images/file_json.png"/>
-    </a>
-
-
-    </a>
-  </div>
-</div>
-</div>
-
 </body>
 </html>
