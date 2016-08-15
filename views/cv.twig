@@ -83,28 +83,27 @@
         <div class="clear"></div>
       </section>
 
-      <section>
-        <p class="sectionHeading">Core Skills</p>
-        <ul class="keySkills coreSkills">
-          {% for skill in skills.skillset|sort %}
-            <li>{{ skill }}</li>
-          {% endfor %}
-        </ul>
+      <section class="clearfix">
+        <p class="sectionHeading">Community Involvement</p>
+        {% for role in volunteering %}
+          <article class="clearfix">
+            <div class="sectionTitle">
+              <h2>{{ role.role }}
+                <span class="date">{{ role.startDate }}  - {{ role.endDate }}</span>
+                    <span class="company">
+                       {{ role.name }}
+                    </span>
+              </h2>
 
-        <div class="clear"></div>
+            </div>
+            <div class="sectionContent">
+              <p>{{ role.description|nl2br }}</p>
+            </div>
+          </article>
+        {% endfor %}
       </section>
 
       <section>
-        <p class="sectionHeading">Toolset</p>
-        <ul class="keySkills">
-          {% for skill in skills.toolset|sort %}
-            <li>{{ skill }}</li>
-          {% endfor %}
-        </ul>
-
-      </section>
-
-      <section style="page-break-before: always;">
         <p class="sectionHeading">Employment History</p>
         {% for job in work|reverse %}
 
@@ -126,24 +125,25 @@
         {% endfor %}
       </section>
 
-      <section class="clearfix">
-        <p class="sectionHeading">Community Involvement</p>
-        {% for role in volunteering %}
-          <article class="clearfix">
-            <div class="sectionTitle">
-              <h2>{{ role.role }}
-                <span class="date">{{ role.startDate }}  - {{ role.endDate }}</span>
-                    <span class="company">
-                       {{ role.name }}
-                    </span>
-              </h2>
+      <section>
+        <p class="sectionHeading">Core Skills</p>
+        <ul class="keySkills coreSkills">
+          {% for skill in skills.skillset|sort %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
 
-            </div>
-            <div class="sectionContent">
-              <p>{{ role.description|nl2br }}</p>
-            </div>
-          </article>
-        {% endfor %}
+        <div class="clear"></div>
+      </section>
+
+      <section>
+        <p class="sectionHeading">Toolset</p>
+        <ul class="keySkills">
+          {% for skill in skills.toolset|sort %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+
       </section>
 
       <section class="education clearfix">
